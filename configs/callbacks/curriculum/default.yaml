@@ -1,0 +1,22 @@
+_target_: amodelyoucanhear.callbacks.Curriculum
+
+monitor: Loss/train
+mode: min
+
+patience: 40
+
+warmup_intensity: .001
+warmup_batch: 2000
+
+decoder_init_mean: 0.
+decoder_init_std: .00001
+
+save_ckpt_at_activation: True
+
+order:
+  - gain
+  - pitch_shifting
+  - passfilters
+  - ce_temperature
+  - decay_10
+  - decay_10

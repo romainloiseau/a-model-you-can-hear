@@ -1,0 +1,21 @@
+name: apnet-model
+
+_target_: amodelyoucanhear.model.APNet
+start_dim: 1
+n_filters: [32, 32, 32]  # or [48, 48, 48]
+kernel_size: [5, 5]
+padding_mode: 'zeros'
+dilation: [1, 1]
+pool_size: [2, 2]
+alpha: 2   # or 10
+beta: 1    #    5
+gamma: 1   #    5
+size_T: 256
+size_F: 128
+M: 100
+K: 33
+
+defaults:
+  - base
+  - /callbacks/iou/default
+  - /callbacks/ckpt_acc/maxacc

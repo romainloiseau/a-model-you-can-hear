@@ -1,0 +1,10 @@
+# @package _global_
+
+model:
+  K: 33
+
+defaults:
+  - /model: baseline
+  - /model/data: sol
+
+experiment: sol/baseline

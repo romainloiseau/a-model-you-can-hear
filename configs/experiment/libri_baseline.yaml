@@ -1,0 +1,12 @@
+# @package _global_
+
+model:
+  K: 128
+  data:
+    n_classes: 128
+
+defaults:
+  - /model: baseline
+  - /model/data: librispeech
+
+experiment: librispeech/baseline

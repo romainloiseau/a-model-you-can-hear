@@ -1,0 +1,20 @@
+# @package _global_
+
+model:
+  K: 128
+  data:
+    n_classes: 128
+  supervised: False
+  callbacks:
+    curriculum:
+      order:
+        - gain
+        - pitch_shifting
+        - passfilters
+        - decay_10
+
+defaults:
+  - /model: amodelyoucanhear
+  - /model/data: librispeech
+
+experiment: ours_unsup

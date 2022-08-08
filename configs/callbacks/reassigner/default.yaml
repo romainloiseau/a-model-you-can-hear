@@ -1,0 +1,4 @@
+_target_: amodelyoucanhear.callbacks.Reassigner
+
+wait_before_start: 0
+threshold: .02

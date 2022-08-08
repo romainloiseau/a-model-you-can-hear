@@ -1,0 +1,20 @@
+# @package _global_
+
+model:
+  K: 33
+  data:
+    n_classes: 33
+  supervised: False
+  callbacks:
+    curriculum:
+      order:
+        - gain
+        - pitch_shifting
+        - passfilters
+        - decay_10
+
+defaults:
+  - /model: amodelyoucanhear
+  - /model/data: sol
+
+experiment: ours_unsup

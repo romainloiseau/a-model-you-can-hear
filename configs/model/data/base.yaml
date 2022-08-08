@@ -1,0 +1,24 @@
+data_dir: "."
+
+num_workers: 16
+
+batch_size: 128
+
+n_mels: 128
+
+n_fft: 1024
+win_length: 
+hop_length: 512
+
+train_spect_size: 256
+
+log10_epsilon: -10
+log10_scale: 17.
+
+prop_val: .1
+
+augmentation_noise: 0.01
+augmentation_bias: .05
+augmentation_pitch: .15
+
+restrict_spect: False

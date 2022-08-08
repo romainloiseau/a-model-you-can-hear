@@ -1,0 +1,6 @@
+_target_: pytorch_lightning.callbacks.ModelCheckpoint
+
+monitor: Losses/rec/val
+mode: min
+auto_insert_metric_name: False
+filename: 'minrec-{epoch}-LOSS={Loss/val:.5f}-REC={Losses/rec/val:.5f}-OA={Acc/OA_val:.2f}'

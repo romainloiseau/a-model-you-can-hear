@@ -1,0 +1,19 @@
+name: noisy-model
+
+_target_: amodelyoucanhear.model.BaseModel
+
+start_dim: 8
+n_pools: 4
+
+supervised: True
+
+load_weights: ""
+
+K: 33
+
+log_every_n_epochs: 10
+log_graph: False
+
+defaults:  
+  - /optim/adam
+  - /callbacks/earlystopping/default

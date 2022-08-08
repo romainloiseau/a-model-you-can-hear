@@ -1,0 +1,12 @@
+name: baseline-model
+
+_target_: amodelyoucanhear.model.BaselineModel
+
+padding_mode: reflect
+
+decoder: [128, 64]
+
+defaults:  
+  - base
+  - /callbacks/iou/default
+  - /callbacks/ckpt_acc/maxacc

@@ -1,0 +1,16 @@
+name: librispeech
+
+_target_: amodelyoucanhear.data.LibriSpeechDataModule
+data_dir: "../../Datasets_Audio"
+
+sample_rate: 16000
+
+train_spect_size: 192
+n_classes: 128
+
+class_names: 0
+
+url: train-clean-360 # dev-clean, dev-other, test-clean, test-other, train-clean-100, train-clean-360, train-other-500
+
+defaults: 
+  - base

@@ -1,0 +1,21 @@
+# @package _global_
+
+trainer:
+  gradient_clip_val: .5
+  gradient_clip_algorithm: "norm"
+
+model:
+  data:
+    batch_size: 128
+    restrict_spect: True
+    n_classes: 128
+  K: 128
+  optim:
+    lr: 1e-4
+    weight_decay: 0
+
+defaults:
+  - /model: apnet
+  - /model/data: librispeech
+
+experiment: librispeech/apnet

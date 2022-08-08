@@ -1,0 +1,48 @@
+name: sol
+
+data_dir: "../../Datasets_Audio/SOL_0.9_HQ"
+_target_: amodelyoucanhear.data.SOLDataModule
+
+sample_rate: 44100
+n_fft: 2048
+
+load_in_memory: False
+
+n_classes: 33
+class_names:
+  - PluckedStrings/Guitar
+  - PluckedStrings/Harp
+  - Bassoons/Bassoon
+  - Saxophones/Alto-Sax
+  - Flutes/Flute
+  - Tubas/Bass-Tuba
+  - Trumpets/Trumpet-C-wah
+  - Trumpets/Trumpet-C-cup
+  - Trumpets/Trumpet-C-harmon
+  - Trumpets/Trumpet-C-straight
+  - Trumpets/Trumpet-C
+  - Horns/Horn-sordina
+  - Horns/Horn
+  - Trombones/Tenor-Trombone-straight
+  - Trombones/Tenor-Trombone-cup
+  - Trombones/Tenor-Trombone-wah
+  - Trombones/Tenor-Trombone-harmon
+  - Trombones/Tenor-Trombone
+  - Strings/Violin
+  - Strings/Violoncello-sordina
+  - Strings/Contrabass
+  - Strings/Viola-sordina
+  - Strings/Contrabass-sordina
+  - Strings/Violoncello
+  - Strings/Viola-sordina-piombo
+  - Strings/Violoncello-sordina-piombo
+  - Strings/Viola
+  - Strings/Violin-sordina-piombo
+  - Strings/Violin-sordina
+  - Keyboards/Accordion
+  - Oboes/Oboe
+  - Oboes/Oboe-sordina
+  - Clarinets/Clarinet-Bb
+
+defaults: 
+  - base

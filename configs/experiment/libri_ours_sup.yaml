@@ -1,0 +1,22 @@
+# @package _global_
+
+model:
+  K: 128
+  data:
+    n_classes: 128
+  supervised: True
+  lambda_crossentropy: 0.01
+  callbacks:
+    curriculum:
+      order:
+        - gain
+        - pitch_shifting
+        - passfilters
+        - ce_temperature
+        - decay_10
+
+defaults:
+  - /model: amodelyoucanhear
+  - /model/data: librispeech
+
+experiment: ours_sup

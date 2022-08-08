@@ -1,0 +1,12 @@
+name: autoencoder-model
+
+_target_: amodelyoucanhear.model.AutoEncoder
+start_dim: 1
+n_filters: [32, 32, 32, 32]  # or [48, 48, 48]
+kernel_size: [5, 5]
+padding_mode: 'zeros'
+dilation: [1, 1]
+pool_size: [2, 2]
+
+defaults:
+  - base

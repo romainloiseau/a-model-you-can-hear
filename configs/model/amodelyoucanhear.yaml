@@ -1,0 +1,42 @@
+name: amodelyoucanhear-model
+
+_target_: amodelyoucanhear.model.AModelYouCanHear
+
+use_bkg: False
+
+padding_mode: reflect
+start_dim: 8
+n_pools: 4
+out_collapseF: 2
+
+proto_size_F: 128
+proto_size_T: 1
+
+one_proto_per_sound: True
+
+n_init_proposals: 2000
+
+supervised: False
+lambda_reconstruction: 1.
+lambda_crossentropy: 0
+temperature_crossentropy: -4.
+lr_scale_ce_temperature: 5.
+
+scale_tanh_pitch_shifting: 1.
+scale_tanh_gain: .5
+scale_tanh_passfilters: .25
+
+reassign_noise_scale: .01
+start_reassignment_at_epoch: 0
+
+running_stats_momentum: .05
+
+same_transfo_for_all_protos: False
+
+defaults:  
+  - base
+  - /callbacks/iou/default
+  - /callbacks/ckpt_acc/maxacc
+  - /callbacks/curriculum/default
+  - /callbacks/reassigner/default
+  - /callbacks/ckpt_rec/minrec
